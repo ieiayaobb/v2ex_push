@@ -51,7 +51,7 @@ def validate():
             ])
 
         # 现在直接将 response 变量内容直接作为 HTTP Response 响应微信服务器即可，此处为了演示返回内容，直接将响应进行输出
-        print response
+        return response
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=80)
