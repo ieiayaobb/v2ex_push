@@ -2,6 +2,8 @@ __author__ = 'shenyineng'
 
 from flask import Flask
 from flask import request
+from xml.dom import minidom
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
@@ -20,7 +22,11 @@ def validate():
 
 @app.route('/', methods=['POST'])
 def handler():
-    print(request.get_data())
+    data = request.get_data()
+    doc = minidom.parseString(data)
+    print doc.getElementsByTagName("FromUserName")
+
+    # print(request.get_data())
 
 
 
