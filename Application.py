@@ -48,7 +48,7 @@ def generate():
         each_post = {
             'title': u'' + hot_json_result[i]['title'] + '',
             'description': u'' + hot_json_result[i]['content'] + '',
-            'picurl': u'' + hot_json_result[i]['member']['avatar_mini'] + '',
+            'picurl': u'' + hot_json_result[i]['member']['avatar_large'] + '',
             'url': u'' + hot_json_result[i]['url'] + '',
             }
 
