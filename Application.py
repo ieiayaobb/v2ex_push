@@ -32,7 +32,7 @@ def validate():
         response = None
         print message.type
         print message.content
-        if message.type == 'text' and message.content == u'新闻':
+        if message.type == 'text':
             response = wechat.response_news([
                 {
                     'title': u'第一条新闻标题',
