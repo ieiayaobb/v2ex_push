@@ -27,7 +27,7 @@ def handler():
 
     root = doc.documentElement
 
-    print root.getElementsByTagName("FromUserName")
+    print root.getElementsByTagName("FromUserName").nodeValue
 
     # print(request.get_data())
 
