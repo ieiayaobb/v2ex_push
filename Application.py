@@ -24,7 +24,10 @@ def validate():
 def handler():
     data = request.get_data()
     doc = minidom.parseString(data)
-    print doc.getElementsByTagName("FromUserName")
+
+    root = doc.documentElement
+
+    print root.getElementsByTagName("FromUserName")
 
     # print(request.get_data())
 
