@@ -32,7 +32,7 @@ def validate():
         response = None
 
         if message.type == 'subscribe':
-            response = wechat.response_text("谢谢关注V2EX热帖分享，输入任意字符以获取最新热帖咨询")
+            response = wechat.response_text("谢谢关注V2EX热帖分享，输入任意内容以获取最新热帖咨询")
 
         if message.type == 'text':
             newsList = generate()
