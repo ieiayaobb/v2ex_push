@@ -15,7 +15,7 @@ class FetchResources():
         hot_response = self.httpClient.getresponse()
 
         hot_result = hot_response.read(amt=hot_response.length)
-        print hot_result
+        # print hot_result
         hot_json_result = json.loads(hot_result)
 
         return hot_json_result
