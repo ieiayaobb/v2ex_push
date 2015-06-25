@@ -31,6 +31,7 @@ def validate():
 
         response = None
 
+        print message.type
         if message.type == 'text':
             newsList = generate()
             response = wechat.response_news(newsList)
