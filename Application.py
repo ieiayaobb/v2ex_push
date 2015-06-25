@@ -16,11 +16,6 @@ def validate():
     timestamp = request.args.get('timestamp')
     nonce = request.args.get('nonce')
 
-    print(signature)
-    print(echostr)
-    print(timestamp)
-    print(nonce)
-
     token = "test"
 
     body_text = request.get_data()
@@ -35,6 +30,8 @@ def validate():
         message = wechat.get_message()
 
         response = None
+        print message.type
+        print message.content
         if message.type == 'text' and message.content == u'新闻':
             response = wechat.response_news([
                 {
